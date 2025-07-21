@@ -7,4 +7,28 @@
   --grid-template-columns-form: minmax(7.5rem, 17.5rem) minmax(25rem, 1fr)
     minmax(0, 15rem);
   --border-width: 6px;
+
+  --animate-slideDownAndFade: slideDownAndFade 0.4s
+    cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slideUpAndFade: slideUpAndFade 1s linear;
+
+  @keyframes slideDownAndFade {
+    0% {
+      opacity: 0;
+      transform: translateY(-2px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUpAndFade {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 }
