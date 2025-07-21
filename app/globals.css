@@ -31,4 +31,16 @@
       opacity: 0;
     }
   }
+
+  --color-error-25: #fffbfa;
+  --color-error-50: #fef3f2;
+  --color-error-100: #fee4e2;
+  --color-error-200: #fecdca;
+  --color-error-300: #fda29b;
+  --color-error-400: #f97066;
+  --color-error-500: #f8443b;
+  --color-error-600: #d92d2b;
+  --color-error-700: #b4231b;
+  --color-error-800: #912018;
+  --color-error-900: #7a271a;
 }
