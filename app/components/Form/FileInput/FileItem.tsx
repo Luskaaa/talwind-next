@@ -6,7 +6,7 @@ import { tv, VariantProps } from "tailwind-variants";
 const fileItem = tv({
   slots: {
     container:
-      "group flex items-start gap-4 rounded-lg border border-zinc-200 p-4",
+      "group flex items-start gap-4 rounded-lg border border-zinc-200 p-4 truncate",
     icon: "rounded-full border-4 border-violet-100 bg-violet-200 p-2 text-violet-600",
     deleteButton: "",
   },
@@ -47,24 +47,26 @@ export function FileItem({ name, size, state }: FileItemProps) {
 
       {state === "error" ? (
         <div className="flex flex-1 flex-col items-start gap-1">
-          <div className="flex flex-col ">
-            <span className="text-sm font-medium text-error-700">
+          <div className="flex flex-col">
+            <span className="text-error-700 text-sm font-medium">
               Upload failed, please try again.
             </span>
-            <span className="text-sm text-error-600">{name}</span>
+            <span className="text-error-600 text-sm">{name}</span>
           </div>
 
           <button
             type="button"
-            className="font-sm font-semibold text-error-700 hover:text-error-700"
+            className="font-sm text-error-700 hover:text-error-700 font-semibold"
           >
             Try again
           </button>
         </div>
       ) : (
         <div className="flex flex-1 flex-col items-start gap-1">
-          <div className="flex flex-col ">
-            <span className="text-sm font-medium text-zinc-700 ">{name}</span>
+          <div className="w-name-file flex flex-col bg-amber-50 lg:w-full">
+            <span className="truncate text-sm font-medium text-zinc-700">
+              {name}
+            </span>
             <span className="text-sm text-zinc-500">{formatBytes(size)}</span>
           </div>
           <div className="flex w-full items-center gap-3">
