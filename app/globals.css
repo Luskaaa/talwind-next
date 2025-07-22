@@ -12,6 +12,8 @@
     cubic-bezier(0.16, 1, 0.3, 1);
   --animate-slideUpAndFade: slideUpAndFade 1s linear;
 
+  --width-name-file: 200px;
+
   @keyframes slideDownAndFade {
     0% {
       opacity: 0;
